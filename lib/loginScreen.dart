@@ -31,16 +31,25 @@ class loginScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.purple[200],
           body: Center(
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Image.asset('images/logo-removebg.png',
+                    height: 200,
+                    ),
+                  ),
 
-                  Text('TODO APP' , style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),),
+                  Padding(
+                    padding: const EdgeInsets.only(top:10.0),
+                    child: Text('TODO APP' , style: TextStyle(fontSize: 40,color: Colors.white, fontWeight: FontWeight.bold),),
+                  ),
                   SizedBox(
-                    height: 100,
+                    height: 10,
                   ),
                   Container(
 
@@ -54,11 +63,18 @@ class loginScreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                Text('ENTER E-MAIL'),
+                                //Text('ENTER E-MAIL', style: TextStyle(color: Colors.white),),
                                 TextField(
                                   controller: nameController,
                                   decoration: InputDecoration(
+                                    hintText: "ENTER YOUR E-MAIL",
+                                    labelText: "E-MAIL",
+                                    labelStyle: TextStyle(color: Colors.white),
                                     focusColor: Colors.blue,
+                                    icon: Icon(
+                                      Icons.mail,
+                                      color: Colors.black,
+                                    ),
 
                                   ),
                                   cursorColor: Colors.red,
@@ -67,11 +83,18 @@ class loginScreen extends StatelessWidget {
                                 SizedBox(
                                   height: 30,
                                 ),
-                                Text('ENTER PASSWORD'),
+                                //Text('ENTER PASSWORD', style: TextStyle(color: Colors.white,),),
                                 TextField(
                                   controller: passwordController,
                                   decoration: InputDecoration(
+                                    hintText: "ENTER YOUR PASSWORD",
+                                    labelText: "PASSWORD",
+                                    labelStyle: TextStyle(color: Colors.white),
                                     focusColor: Colors.blue,
+                                    icon: Icon(
+                                      Icons.lock,
+                                      color: Colors.black,
+                                    ),
 
                                   ),
                                   cursorColor: Colors.red,
@@ -86,9 +109,9 @@ class loginScreen extends StatelessWidget {
                                   minWidth: double.maxFinite,
                                   height: 50,
                                   onPressed: () => logIn(context),
-                                  color: logoColor,
+                                  color: Colors.green[500],
                                   child: Text('LOGIN',
-                                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                                      style: TextStyle(color: Colors.black, fontSize: 16)),
                                   textColor: Colors.white,
                                 ),
                                 SizedBox(height: 20),
@@ -97,9 +120,9 @@ class loginScreen extends StatelessWidget {
                                   minWidth: double.maxFinite,
                                   height: 50,
                                   onPressed: () => registerUser(context),
-                                  color: Colors.blue,
+                                  color: Colors.amberAccent,
                                   child: Text('REGISTER',
-                                      style: TextStyle(color: Colors.white, fontSize: 16)),
+                                      style: TextStyle(color: Colors.black, fontSize: 16)),
                                   textColor: Colors.white,
                                 ),
                                 SizedBox(height: 20),

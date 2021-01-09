@@ -15,7 +15,7 @@ class splash extends StatelessWidget {
         nextScreen: loginScreen(),
         splashTransition: SplashTransition.rotationTransition,
         duration: 3000,
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.blueGrey,
       ),
     );
   }
